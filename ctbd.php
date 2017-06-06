@@ -8,8 +8,8 @@
    $db = 'db552233303';
    $uid = 'root';
    $pwd = 'lokomotiv1973';
-   $stringRespuestaNick='El nick ya esta en uso';
-   $stringRespuestaPass='El password ya esta en uso';
+   $stringRespuestaNick='El nick ya está en uso';
+   $stringRespuestaPass='El password ya está en uso';
    
    $link = mysql_connect($host, $uid, $pwd) or die("No se puede conectar");
    mysql_select_db($db) or die("No se puede seleccionar la bd");
