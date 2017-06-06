@@ -1,0 +1,9 @@
+<html>
+<head>
+<title>Formulario con Ajax</title>
+<?php include'insert.php';?>
+</head>
+<body>
+<h1>Insercion realizada</h1>
+</body>
+</html>

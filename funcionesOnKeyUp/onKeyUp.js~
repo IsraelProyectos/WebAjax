@@ -1,0 +1,19 @@
+function comprobarNick(nick) {
+     
+     var url = 'ctbd.php';
+     var pars ='nickname='+nick+'&campoComprobacion=nick';
+     new Ajax.Updater('existeNombre', 'ctbd.php', {
+      method: 'get',
+      parameters: pars
+      });
+}
+
+function comprobarPassword(password) {
+     
+     var url = 'ctbd.php';
+     var pars ='pass='+password;    
+     new Ajax.Updater('existePassword', 'ctbd.php', {
+      method: 'get',
+      parameters: pars
+     });
+}

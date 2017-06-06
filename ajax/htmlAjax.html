@@ -1,0 +1,28 @@
+<html>
+<head>
+   <title>Recibir contenido por Ajax</title>
+   <script src="prototype.js" type="text/javascript"></script>
+<script>
+function recibirAjax(){
+   $('cargando').update("Cargando...");
+   new Ajax.Updater('contenidoajax', 'phpAjax.php', {
+      method: 'get',
+      parameters: {miparametro: 'lo que sea', otro: 58},
+      
+      onSuccess: function(){
+         $('cargando').update("");
+      }
+   });
+}
+</script>
+</head>
+
+<body>
+
+<div id="contenidoajax"></div>
+<p>
+- <a href="javascript: recibirAjax();">Pulsame para recibir un contenido con Ajax</a>
+<p>
+<div id="cargando"></div>
+</body>
+</html>

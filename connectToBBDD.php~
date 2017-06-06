@@ -1,0 +1,22 @@
+<?php
+
+error_reporting(E_ALL);
+$nick=$_REQUEST['nickname'];
+$host = 'localhost';
+$db = 'db552233303';
+$uid = 'root';
+$pwd = 'lokomotiv1973';
+
+$link = mysql_connect($host, $uid, $pwd) or die("No se puede conectar");
+
+mysql_select_db($db) or die("No se puede seleccionar la bd");
+
+$rs2 = mysql_query("SELECT COUNT(*) FROM PruebaIOS WHERE Nombre = '$nick'");
+
+if($rs==1){
+echo "1";
+}else {
+echo "0";
+}
+
+?>

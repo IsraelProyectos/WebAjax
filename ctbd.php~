@@ -1,0 +1,28 @@
+<?php
+   error_reporting(E_ALL);
+   $nick=$_GET['nickname'];
+   $password=$_GET['pass'];
+   $campoComprobacion=$_GET['campoComprobacion'];
+   $host = 'localhost';
+   $db = 'db552233303';
+   $uid = 'root';
+   $pwd = 'lokomotiv1973';
+   
+   $link = mysql_connect($host, $uid, $pwd) or die("No se puede conectar");
+
+   mysql_select_db($db) or die("No se puede seleccionar la bd");
+   
+  
+   $sql = ("SELECT COUNT(*) FROM PruebaIOS WHERE Nombre = '".$nick."'");
+   
+   
+   $result = mysql_query($sql);
+   $result = mysql_fetch_array($result);
+   
+   if($result[0]==1){
+   echo "el nick ya existe";
+   }else {
+   echo "el nick es correcto";
+   }
+   
+?>
