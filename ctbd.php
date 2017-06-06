@@ -1,4 +1,5 @@
 <?php
+   //hola
    error_reporting(E_ALL);
    $nick=$_GET['nickname'];
    $password=$_GET['pass'];
